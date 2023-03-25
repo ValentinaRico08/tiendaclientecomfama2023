@@ -1,4 +1,9 @@
 .fondo{
-    background-color: green;
-    color:white;
+    background-color: gray;
+    color:black;
+    border: solid black;
+}
+.fondo2{
+background-color: rgb(246, 246, 193);
+border: solid black;
 }

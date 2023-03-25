@@ -1,5 +1,5 @@
 .banner{
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/tiendadonchucho-2c4fb.appspot.com/o/FrutasyVerduras.jpg?alt=media&token=3bb1cca9-355b-4d03-bad4-a4e7adfdc3b6");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/Monocrom%C3%A1tico%20Paisaje%20Banner%20para%20Tumblr.png?alt=media&token=ddc8bad4-458c-4ad1-9e2c-158a85b15262");
     background-position: top center;
     background-size: cover;
     padding: 22%;
@@ -19,4 +19,8 @@
     left:0;
     opacity: 0.5;
     z-index: -1;
+}
+
+.letrau{
+    color: rgb(246, 246, 193);
 }

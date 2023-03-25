@@ -9,7 +9,7 @@ export function Servicios(){
                         <h2>Servicio 1</h2>
                         <i class="bi bi-credit-card fs-1"></i>
                     </div>
-                    <div class="col-12 col-md-3 fondo">
+                    <div class="col-12 col-md-3 fondo2">
                         <h2>Servicio 1</h2>
                         <i class="bi bi-credit-card fs-1"></i>
                     </div>
