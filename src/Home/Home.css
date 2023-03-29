@@ -1,5 +1,5 @@
 .banner{
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/Monocrom%C3%A1tico%20Paisaje%20Banner%20para%20Tumblr.png?alt=media&token=ddc8bad4-458c-4ad1-9e2c-158a85b15262");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/gabriel-garcia-marquez-5-900x491.jpg?alt=media&token=36a8c5b8-84af-4fa6-9783-0eaf30946ca8");
     background-position: top center;
     background-size: cover;
     padding: 22%;
@@ -21,6 +21,6 @@
     z-index: -1;
 }
 
-.letrau{
-    color: rgb(246, 246, 193);
+.letrau {
+    font-size: 80px;
 }

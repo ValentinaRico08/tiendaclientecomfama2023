@@ -5,7 +5,7 @@ export function AcercaDe(){
                 <div class="container my-5">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-4">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/350px-Cubierta100.jpg?alt=media&token=6744eb89-5362-432f-87ff-aff659320a82" alt="foto" class="img-fluid"/>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/images.jpg?alt=media&token=7da06031-2c23-493d-b6bc-3cfd86cab77d" alt="foto" class="img-fluid"/>
                         </div>
                         <div class="col-12 col-md-4 text-center align-self-center">
                             <h2>LIBRERIA MACONDO</h2>

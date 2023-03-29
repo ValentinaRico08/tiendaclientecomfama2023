@@ -7,14 +7,10 @@ export function Administrador(){
             <br></br>
             <div class="container-fluid my-5">
                 <div class="row">
-                    <div class="col-7">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/alan-pennisi-escanear0008.jpg?alt=media&token=91d13b56-0db5-49b9-a1fb-a35d160361f5" alt="foto" class="img-fluid"/>
+                    <div class="col-6">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/cien-anos-de-soledad-gabriel-garcia-marquez-condiciones-1552058543.jpg?alt=media&token=9bb8ba13-1116-4437-b9cb-7841c8259519" alt="foto" class="img-fluid"/>
                     </div>
-                    <div class="col-4">
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
+                    <div class="col-5">
                         <h2>Registro de Mercancia.</h2>
                         <br></br>
                         <form>

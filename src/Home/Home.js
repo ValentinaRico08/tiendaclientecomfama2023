@@ -7,7 +7,7 @@ export function Home(){
         <>
             <section>
                 <div class="banner">
-                    <h1>LIBRERIA</h1>
+                    <h1 class="letrau">LIBRERIA</h1>
                     <h1 class="letrau">MACONDO</h1>
                 </div>
             </section>
