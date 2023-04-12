@@ -9,3 +9,10 @@
 .zoom:hover{
     transform: scale(1.1);
 }
+
+.precio{
+    color: rgb(3, 98, 3);
+    font-size: 25px;
+}
+
+

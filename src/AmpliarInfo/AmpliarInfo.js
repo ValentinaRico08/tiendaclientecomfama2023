@@ -1,7 +1,12 @@
 import './AmpliarInfo.css'
 import { Link } from "react-router-dom"
+import {useLocation} from "react-router-dom"
 
 export function AmpliarInfo(){
+
+    let location=useLocation()
+    let producto=location.state.producto
+    console.log(producto)
 
     return(
         <>
@@ -11,10 +16,10 @@ export function AmpliarInfo(){
             <div class="container my-5">
                 <div class="row">
                     <div class="col-12 col-md-5 ">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/ciena%C3%B1osdesoledad.webp?alt=media&token=aab0da80-7f7e-4990-8ba4-9001588e758f" class="img-fluid w-100" alt="Libro" />
+                        <img src={producto.foto} class="img-fluid w-100" alt="Libro" />
                     </div>
                     <div class="col-12 col-md-7 border p-3 rounded shadow">
-                        <h1 class="fw-bold">Cien años de soledad.</h1>
+                        <h1 class="fw-bold">{producto.nombre}</h1>
                         <i class="bi bi-star-fill text-warning fs-4 ms-1"></i>
                         <i class="bi bi-star-fill text-warning fs-4 ms-1"></i>
                         <i class="bi bi-star-fill text-warning fs-4 ms-1"></i>
@@ -24,7 +29,7 @@ export function AmpliarInfo(){
                         <span class="badge text-bg-warning mt-3">Más vendido</span>
                         <br></br>
                         <br></br>
-                        <h1>$78000</h1>
+                        <h1>${producto.precio}</h1>
                         <span class="badge text-bg-primary mt-3">¡Oferta!</span>
                         <br></br>
                         <br></br>

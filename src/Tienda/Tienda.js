@@ -1,5 +1,6 @@
 import './Tienda.css'
-import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
+
 
 export function Tienda(){
 
@@ -11,6 +12,14 @@ export function Tienda(){
     function cambiarFoto2(evento){
         evento.preventDefault()
         evento.target.classList.add("sombra")
+    }
+
+    let navegador= useNavigate()
+    function pasarInformacion(producto){
+        navegador('/compras',{
+            state:{producto}
+        })
+      
     }
 
     let productos=[
@@ -88,28 +97,19 @@ export function Tienda(){
 
     return(
         <>
-           <div class="row row-cols-1 row-cols-md-5 g-5 my-5">
+           <div class="row row-cols-1 row-cols-md-4 g-5 my-5">
                 {
                     productos.map(function(producto){
                         return(
-                            <div class="col zoom">
+                            <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
                                 <div class="card shadow h-100 p-2">
-                                
-                                        
-                                    
-                                <i class="bi bi-book-half"></i>
                                     <img src={producto.foto} alt="foto" class="img-fluid sombra" 
                                         onMouseOver={cambiarFoto} 
                                         onMouseLeave={cambiarFoto2}
-                                        
                                     />
                                     <h2 class="text-center">{producto.nombre}</h2>
                                     <p class="text-center">{producto.descripción}</p>
-                                    <h5 class="text-center">${producto.precio}</h5>
-                                    <br></br>
-                                    <Link class="nav-link text-center fw-bold" to="/compras">¡Comprar!</Link>
-            
-                                    
+                                    <h5 class="text-center precio">${producto.precio}</h5>  
                                 </div>
                             </div>
                         )
