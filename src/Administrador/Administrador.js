@@ -1,5 +1,7 @@
 import './Administrador.css'
-import { useState } from 'react'
+import { useState,useEffect} from 'react'
+import { registrarProductoEnBd } from '../services/agregarProducto'
+
 export function Administrador(){
 
     const[nombre,setNombre]=useState("")
@@ -16,6 +18,7 @@ export function Administrador(){
     const[fechaingreso, setFechaIngreso]=useState("")
     const[fechavencimiento, setFechaVencimiento]=useState("")
     const[descuento, setDescuento]=useState("")
+    const[estado,setEstado]=useState("")
 
     function procesarFormulario(evento){
         evento.preventDefault()
@@ -24,19 +27,26 @@ export function Administrador(){
             "foto":foto,
             "cantidad":cantidad,
             "descripcion":descripcion,
-            "precio":precio,
+            "precioUnitario":precio,
             "clasificacion":clasificacion,
             "marca":marca,
             "presentacion":presentacion,
             "peso": peso,
             "proveedor": proveedor,
             "volumen":volumen,
-            "fechaingreso":fechaingreso,
-            "fechavencimiento":fechavencimiento,
-            "descuento":descuento
+            "fechaIngreso":fechaingreso,
+            "fechaVencimiento":fechavencimiento,
+            "aplicaDescuento":descuento,
+            "estado":estado
         }
         console.log(datosProducto)
+        registrarProductoEnBd(datosProducto)
+        .then(function(respuesta){
+            console.log(respuesta)
+        })
     }
+
+
 
     return(
         <>
@@ -271,6 +281,23 @@ export function Administrador(){
                                         />
                                 </div>
                                 </div>
+                                <div class="col-4">
+                                <br></br>
+                                <br></br>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-percent"></i></span>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="estado" 
+                                        placeholder="Estado"
+                                        onChange={(evento)=>{
+                                            setDescuento(evento.target.value)
+                                        }}
+                                        />
+                                        </div>
+                                        </div>
+
                                 <div class="d-grid gap-2">
                                     <br></br>
                                     <br></br>

@@ -1,8 +1,13 @@
 import './Tienda.css'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import {consultarProductos} from '../services/buscarProductos'
 
 
 export function Tienda(){
+
+    const[productostienda,setProductostienda]=useState("")
+    const[estadocarga,setEstadoCarga]=useState(true)
 
     function cambiarFoto(evento){
         evento.preventDefault()
@@ -22,7 +27,49 @@ export function Tienda(){
       
     }
 
-    let productos=[
+    useEffect(function(){
+        consultarProductos()
+        .then(function(respuesta){
+            setEstadoCarga(false)
+            setProductostienda(respuesta)
+        })  
+    },[])
+
+    if(estadocarga==true){
+
+        return(
+            <>
+                <h1>ESTAMOS CARGANDO...</h1>
+            </>
+        )
+    }else{
+        return(
+            <>
+               <div class="row row-cols-1 row-cols-md-4 g-5 my-5">
+                    {
+                        productostienda.map(function(producto){
+                            return(
+                                <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
+                                    <div class="card shadow h-100 p-2">
+                                        <img src={producto.foto} alt="foto" class="img-fluid sombra" 
+                                            onMouseOver={cambiarFoto} 
+                                            onMouseLeave={cambiarFoto2}
+                                        />
+                                        <h2 class="text-center">{producto.nombre}</h2>
+                                        <p class="text-center">{producto.descripción}</p>
+                                        <h5 class="text-center precio">${producto.precio}</h5>  
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+               </div>
+            </>
+        )
+    }
+    }
+
+    /*let productos=[
         {
             nombre:"Cien años de soledad.",
             precio:78000,
@@ -93,29 +140,6 @@ export function Tienda(){
             foto:"https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/relatode.webp?alt=media&token=99e5c1ef-eef4-4cb6-bd15-731b33e9d431", 
            
         }
-    ]
+    ]*/
 
-    return(
-        <>
-           <div class="row row-cols-1 row-cols-md-4 g-5 my-5">
-                {
-                    productos.map(function(producto){
-                        return(
-                            <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
-                                <div class="card shadow h-100 p-2">
-                                    <img src={producto.foto} alt="foto" class="img-fluid sombra" 
-                                        onMouseOver={cambiarFoto} 
-                                        onMouseLeave={cambiarFoto2}
-                                    />
-                                    <h2 class="text-center">{producto.nombre}</h2>
-                                    <p class="text-center">{producto.descripción}</p>
-                                    <h5 class="text-center precio">${producto.precio}</h5>  
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-           </div>
-        </>
-    )
-}
+   
