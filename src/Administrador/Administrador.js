@@ -1,4 +1,5 @@
 import './Administrador.css'
+import Swal from 'sweetalert2'
 import { useState,useEffect} from 'react'
 import { registrarProductoEnBd } from '../services/agregarProducto'
 
@@ -18,7 +19,7 @@ export function Administrador(){
     const[fechaingreso, setFechaIngreso]=useState("")
     const[fechavencimiento, setFechaVencimiento]=useState("")
     const[descuento, setDescuento]=useState("")
-    const[estado,setEstado]=useState("")
+    //const[estado,setEstado]=useState("")
 
     function procesarFormulario(evento){
         evento.preventDefault()
@@ -37,12 +38,23 @@ export function Administrador(){
             "fechaIngreso":fechaingreso,
             "fechaVencimiento":fechavencimiento,
             "aplicaDescuento":descuento,
-            "estado":estado
+            //"estado":estado
         }
         console.log(datosProducto)
         registrarProductoEnBd(datosProducto)
         .then(function(respuesta){
-            console.log(respuesta)
+            Swal.fire(
+                '¡Exito en el registro!',
+                '¡Tu producto fue registrado!',
+                'success'
+              )
+        })
+        .catch(function(error){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No pudimos registratr el producto.',
+              })
         })
     }
 
