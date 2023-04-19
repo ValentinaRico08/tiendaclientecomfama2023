@@ -8,8 +8,11 @@ export function Servicios(){
                     <br></br>
                     <br></br>
                     <br></br>
+                    <h1 class="text-center">EVENTOS.</h1>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 <div class="row text-center justify-content-around">
-                  
                     <div class="col-12 col-md-3 ">
                     <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/71LnyWa2CuL._AC_UF1000%2C1000_QL80_.jpg?alt=media&token=5cc60ad3-0113-4d9f-a855-9ce7863d7924"alt="foto" class="img-fluid" />
 

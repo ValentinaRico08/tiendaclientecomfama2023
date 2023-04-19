@@ -53,7 +53,7 @@ export function Administrador(){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'No pudimos registratr el producto.',
+                text: 'No pudimos registrar el producto.',
               })
         })
     }
