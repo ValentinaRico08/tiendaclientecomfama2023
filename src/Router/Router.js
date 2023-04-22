@@ -6,6 +6,7 @@ import { Tienda } from "../Tienda/Tienda"
 import { AmpliarInfo } from "../AmpliarInfo/AmpliarInfo"
 import { Footer } from "../Footer/Footer"
 import { QuienesSomos } from "../QuienesSomos/QuienesSomos"
+import { Nosotos } from "../Nosotros/Nosotros"
 
 
 export function Router(){
@@ -20,6 +21,7 @@ export function Router(){
           <Route path="/productos" element={<Tienda />} />
           <Route path="/compras" element={<AmpliarInfo />} />
           <Route path="/quienes" element={<QuienesSomos />} />
+          <Route path="/nosotros" element={<Nosotos/>}/>
         </Routes>
         <footer>
           <Footer></Footer>

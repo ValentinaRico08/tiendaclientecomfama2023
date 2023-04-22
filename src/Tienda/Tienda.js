@@ -57,7 +57,7 @@ export function Tienda(){
                                         />
                                         <h2 class="text-center">{producto.nombre}</h2>
                                         <p class="text-center">{producto.descripción}</p>
-                                        <h5 class="text-center precio">${producto.precio}</h5>  
+                                        <h5 class="text-center precio">${producto.precioUnitario}</h5>  
                                     </div>
                                 </div>
                             )

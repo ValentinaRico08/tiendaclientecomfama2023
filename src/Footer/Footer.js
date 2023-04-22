@@ -15,7 +15,7 @@ export function Footer() {
                         </div>
                         <br></br>
                         <p class="card-text">Cr 48 #41-63-Primer piso.</p>
-                        <p class="card-text">Copy © Valentina 2022</p>
+                        <p class="card-text">Copy © Valentina-Moises 2023</p>
                     </div>
                 </div>
             </footer>

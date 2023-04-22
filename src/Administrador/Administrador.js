@@ -19,13 +19,14 @@ export function Administrador(){
     const[fechaingreso, setFechaIngreso]=useState("")
     const[fechavencimiento, setFechaVencimiento]=useState("")
     const[descuento, setDescuento]=useState("")
-    //const[estado,setEstado]=useState("")
+    const[estado,setEstado]=useState("")
 
     function procesarFormulario(evento){
         evento.preventDefault()
         let datosProducto ={
             "nombre":nombre,
             "foto":foto,
+            "precioUnitario":precio,
             "cantidad":cantidad,
             "descripcion":descripcion,
             "precioUnitario":precio,
@@ -38,7 +39,7 @@ export function Administrador(){
             "fechaIngreso":fechaingreso,
             "fechaVencimiento":fechavencimiento,
             "aplicaDescuento":descuento,
-            //"estado":estado
+            "estado":estado
         }
         console.log(datosProducto)
         registrarProductoEnBd(datosProducto)
@@ -59,7 +60,6 @@ export function Administrador(){
     }
 
 
-
     return(
         <>
             <br></br>
@@ -67,9 +67,15 @@ export function Administrador(){
             <div class="container-fluid my-5">
                 <div class="row">
                     <div class="col-6">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/cien-anos-de-soledad-gabriel-garcia-marquez-condiciones-1552058543.jpg?alt=media&token=9bb8ba13-1116-4437-b9cb-7841c8259519" alt="foto" class="img-fluid"/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+
+                        <img src="https://firebasestorage.googleapis.com/v0/b/tiendasisu-b70ee.appspot.com/o/cien-anos-de-soledad-gabriel-garcia-marquez-condiciones-1552058543.jpg?alt=media&token=9bb8ba13-1116-4437-b9cb-7841c8259519" alt="foto" class="img-fluid img-thumbnail"/>
                     </div>
-                    <div class="col-5">
+                    <div class="col-5 text-center">
                         <h2>Registro de Mercancia.</h2>
                         <br></br>
                         <form onSubmit={procesarFormulario}>
@@ -141,7 +147,7 @@ export function Administrador(){
                                     <input 
                                         type="number" 
                                         class="form-control" 
-                                        id="precio" 
+                                        id="precioUnitario" 
                                         placeholder="Precio"
                                         onChange={(evento)=>{
                                             setPrecio(evento.target.value)
@@ -304,7 +310,7 @@ export function Administrador(){
                                         id="estado" 
                                         placeholder="Estado"
                                         onChange={(evento)=>{
-                                            setDescuento(evento.target.value)
+                                            setEstado(evento.target.value)
                                         }}
                                         />
                                         </div>

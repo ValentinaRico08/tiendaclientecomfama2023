@@ -1,4 +1,3 @@
-import { wait } from "@testing-library/user-event/dist/utils"
 
 export async function registrarProductoEnBd(datosEnvio){
 

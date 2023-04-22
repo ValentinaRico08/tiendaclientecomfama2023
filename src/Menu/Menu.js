@@ -24,6 +24,9 @@ export function Menu(){
                     <li class="nav-item">
                         <Link class="nav-link" to="/quienes">¿Quienes Somos?</Link>
                     </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" to="/nosotros">Nosotros</Link>
+                    </li>
                 </ul>
                 </div>
                 </div>
